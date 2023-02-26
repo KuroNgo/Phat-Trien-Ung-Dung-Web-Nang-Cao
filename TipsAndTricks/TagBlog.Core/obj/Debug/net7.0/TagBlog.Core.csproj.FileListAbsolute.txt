@@ -1,0 +1,12 @@
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\bin\Debug\net7.0\TagBlog.Core.deps.json
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\bin\Debug\net7.0\TagBlog.Core.dll
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\bin\Debug\net7.0\TagBlog.Core.pdb
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\TagBlog.Core.csproj.AssemblyReference.cache
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\TagBlog.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\TagBlog.Core.AssemblyInfoInputs.cache
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\TagBlog.Core.AssemblyInfo.cs
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\TagBlog.Core.csproj.CoreCompileInputs.cache
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\TagBlog.Core.dll
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\refint\TagBlog.Core.dll
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\TagBlog.Core.pdb
+D:\DATA PHONG\Phat_Trien_Ung_Dung_Web_Nang_Cao\TipsAndTricks\TagBlog.Core\obj\Debug\net7.0\ref\TagBlog.Core.dll
