@@ -8,10 +8,11 @@ using TagBlog.Core.Constraints;
 using TagBlog.Core.DTO;
 using TagBlog.Core.Entities;
 using TagBlog.Data.Contexts;
+using TagBlog.Services.Extensions;
 
 namespace TagBlog.Services.Blogs
 {
-    public class BlogRepository:IBlogRepository
+    public class BlogRepository : IBlogRepository
     {
         private readonly BlogDbContext _context;
         public BlogRepository(BlogDbContext context)
@@ -82,17 +83,18 @@ namespace TagBlog.Services.Blogs
                 })
                 .ToListAsync(cancellationToken);
         }
-        public async Task<IPagedList<Tag>> GetPagedTagAsync(IPagingParams pagingParams, CancellationToken cancellationToken = default)
+
+        public async Task<IPagedList<TagItem>> GetPagedTagsAsync(IPagingParams pagingParams, CancellationToken cancellationToken = default)
         {
             var tagQuery = _context.Set<Tag>()
-                .Select(x => new Tag()
+                .Select(x => new TagItem()
                 {
                     Id = x.Id,
                     Name = x.Name,
 
                     UrlSlug = x.UrlSlug,
                     Description = x.Description,
-                    //PostCount = x.Posts.Count(p => p.Published)
+                    PostCount = x.Posts.Count(p => p.Published)
                 });
             return await tagQuery.ToPagedListAsync(pagingParams, cancellationToken);
         }

@@ -1,6 +1,4 @@
-﻿using TagBlog.Core.Entities;
-using TagBlog.Data.Contexts;
-using TagBlog.Data.Seeders;
+﻿using TagBlog.Data.Contexts;
 using TagBlog.Services.Blogs;
 
 namespace TagBlog.WinApp
@@ -18,12 +16,16 @@ namespace TagBlog.WinApp
                 SortColumn = "name",
                 SortOrder = "DESC"
             };
-            //var tagsList = await blogRepository.GetPageTagsAsync(pagingParams);
-            Console.WriteLine("{0,-5}{1,-50}{2,10}", "ID", "Name", "Count");
-            //foreach (var item in tagsList)
-            //{
-            //    Console.WriteLine("{ 0,-5}{ 1,-50}{ 2,10}",item.Id,item.Name,item.PostCount);
-            //}
+            var tagsList = await blogRepository.GetPagedTagsAsync(pagingParams);
+
+            Console.WriteLine("{0,-5}{1,-50}{2,10}",
+                "ID", "Name", "Count");
+
+            foreach (var item in tagsList)
+            {
+                Console.WriteLine("{0,-5}{1,-50}{2,10}",
+                    item.Id, item.Name, item.PostCount);
+            }
             // Khi cập nhật thông tin mới thì lúc chạy lên lại không hiển thị những thông tin mới đó mà chỉ nhận những thông tin cũ
             // Tạo đối tượng DbContext để quản lý phiên bản làm việc
             // VỚi CSDL và trạng thái của đối tượng

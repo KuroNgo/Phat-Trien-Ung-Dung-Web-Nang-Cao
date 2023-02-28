@@ -17,6 +17,6 @@ namespace TagBlog.Services.Blogs
         Task<bool> IsPostSlugExistAsync(int postId,string slug, CancellationToken cancellationToken = default);
         Task<IList<CategoryItem>> GetCategoryItemsAsync(bool showOnMenu = false, CancellationToken cancellationToken = default);
         Task IncreaseViewCountAsync(int postId,CancellationToken cancellationToken = default);
-        Task<IPagedList<Tag>> GetPageTagsAsync(IPagingParams pagingParams, CancellationToken cancellationToken = default);
+        Task<IPagedList<TagItem>> GetPagedTagsAsync(IPagingParams pagingParams, CancellationToken cancellationToken = default);
     }
 }

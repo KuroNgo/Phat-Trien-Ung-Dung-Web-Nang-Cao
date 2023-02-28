@@ -4,16 +4,15 @@ namespace TagBlog.Core.Collections
 {
     public class PagedList<T> : IPagedList<T>
     {
-        private readonly List<T> _list = new();
+        private readonly List<T> _subset = new();
         public PagedList(IList<T> list, int pageNumber, int pageSize, int totalCount)
         {
             PageNumber = pageNumber;
             PageSize = pageSize;
             TotalItemCount = totalCount;
-            _list.AddRange(list);
+            _subset.AddRange(list);
         }
 
-        public T this[int index] => throw new NotImplementedException();
 
         public int PageIndex { get; set; }
         public int TotalItemCount { get; set; }
@@ -34,8 +33,6 @@ namespace TagBlog.Core.Collections
             }
         }
 
-        public int Count => throw new NotImplementedException();
-
         public int HasPreviousPage => throw new NotImplementedException();
 
         public int HasNextPage => throw new NotImplementedException();
@@ -48,16 +45,19 @@ namespace TagBlog.Core.Collections
 
         public int LastItemIndex => throw new NotImplementedException();
 
+        #region
         public IEnumerator<T> GetEnumerator()
         {
-            return _list.GetEnumerator();
+            return _subset.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
-        //public T this[int index] => _list[index];
-        //public virtual int Count => _list.Count;
+
+        public T this[int index] => _subset[index];
+        public virtual int Count => _subset.Count;
+        #endregion
     }
 }
