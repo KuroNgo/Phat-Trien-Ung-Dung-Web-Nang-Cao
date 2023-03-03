@@ -18,8 +18,8 @@ namespace TagBlog.Data.Seeders
         public void Initialize()
         {
             //tại vì có dữ liệu rồi nên nó sẽ ko thêm nữa
-            _dbContext.Database.EnsureCreated();
-            if (_dbContext.Posts.Any())  return; 
+            //_dbContext.Database.EnsureCreated();
+            //if (_dbContext.Posts.Any()) return;
             var authors = AddAuthor();
             var categories=AddCategory();
             var tags=AddTag();
@@ -62,16 +62,16 @@ namespace TagBlog.Data.Seeders
         {
             var categories = new List<Category>()
             {
-                new() { Name = ".NET Core", Description = ".NET Core", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = "Architecture", Description = "Architecture", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = "Messaging", Description = "Architecture", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = "OOP", Description = "Architecture", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = "Design Pattern", Description = "Design Pattern", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = ".NET Core", Description = ".NET Core", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = "Architecture", Description = "Architecture", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = "Messaging", Description = "Architecture", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = "OOP", Description = "Architecture", UrlSlug = "", ShowOnMenu = true },
-                new() { Name = "Design Pattern", Description = "Design Pattern", UrlSlug = "", ShowOnMenu = true }
+                new() { Name = ".NET Core", Description = ".NET Core", UrlSlug = "NET-Core", ShowOnMenu = true },
+                new() { Name = "Architecture", Description = "Architecture", UrlSlug = "Architecture", ShowOnMenu = true },
+                new() { Name = "Messaging", Description = "Architecture", UrlSlug = "Architecture", ShowOnMenu = true },
+                new() { Name = "OOP", Description = "Architecture", UrlSlug = "Architecture", ShowOnMenu = true },
+                new() { Name = "Design Pattern", Description = "Design Pattern", UrlSlug = "Design Pattern", ShowOnMenu = true },
+                new() { Name = ".NET Core", Description = ".NET Core", UrlSlug = "NET-Core", ShowOnMenu = true },
+                new() { Name = "Architecture", Description = "Architecture", UrlSlug = "Architecture", ShowOnMenu = true },
+                new() { Name = "Messaging", Description = "Architecture", UrlSlug = "Architecture", ShowOnMenu = true },
+                new() { Name = "OOP", Description = "Architecture", UrlSlug = "Architecture", ShowOnMenu = true },
+                new() { Name = "Design Pattern", Description = "Design Pattern", UrlSlug = "Design-Pattern", ShowOnMenu = true }
             };
 
             _dbContext.Categories.AddRange(categories);
@@ -84,17 +84,17 @@ namespace TagBlog.Data.Seeders
         {
             var tags = new List<Tag>()
             {
-                new() {Name="Google",Description="Google applications",UrlSlug=""},
-                new(){Name="ASP.net MVC",Description="ASP.NET MVC",UrlSlug=""},
-                new(){Name="Razor",Description="Razor",UrlSlug=""},
-                new(){Name="Blazor",Description="Blazor",UrlSlug=""},
-                new(){Name="Deep Learning",Description="Deep Learning",UrlSlug=""},
-                new() {Name="Natural Network",Description="Natural Network",UrlSlug=""},
-                new(){Name="ASP.net MVC",Description="ASP.NET MVC",UrlSlug=""},
-                new(){Name="Razor",Description="Razor",UrlSlug=""},
-                new(){Name="Blazor",Description="Blazor",UrlSlug=""},
-                new(){Name="Deep Learning",Description="Deep Learning",UrlSlug=""},
-                new() {Name="Natural Network",Description="Natural Network",UrlSlug=""}
+                new() {Name="Google",Description="Google applications",UrlSlug="Google-applications"},
+                new(){Name="ASP.net MVC",Description="ASP.NET MVC",UrlSlug="ASPNET-MVC"},
+                new(){Name="Razor",Description="Razor",UrlSlug="Razor"},
+                new(){Name="Blazor",Description="Blazor",UrlSlug="Blazor"},
+                new(){Name="Deep Learning",Description="Deep Learning",UrlSlug="Deep-Learning"},
+                new() {Name="Natural Network",Description="Natural Network",UrlSlug="Natural-Network"},
+                new(){Name="ASP.net MVC",Description="ASP.NET MVC",UrlSlug="ASPNET-MVC"},
+                new(){Name="Razor",Description="Razor",UrlSlug="Razor"},
+                new(){Name="Blazor",Description="Blazor",UrlSlug="Blazor"},
+                new(){Name="Deep Learning",Description="Deep Learning",UrlSlug="Deep-Learning"},
+                new() {Name="Natural Network",Description="Natural Network",UrlSlug="Natural-Network"}
             };
 
             _dbContext.Tags.AddRange(tags);
@@ -159,24 +159,6 @@ namespace TagBlog.Data.Seeders
                     Category=categories[0],
                     Tags=new List<Tag>()
                     {
-                        tags[0]
-                    }
-                },
-                new()
-                {
-                    Title="ASP.NET COre Diagnostic Scenarious",
-                    ShortDescription="David and Friend has a greate reposive",
-                    Description="Here's a few greate DON'T and Do examples",
-                    Meta="David and friends has a greate repository filled",
-                    UrlSlug="ASPNET core diagnoretic-scenarious",
-                    Published=true,
-                    PostDate=new DateTime(2021,9,30,10,20,0),
-                    ModifedDate=null,
-                    ViewCount=10,
-                    Author=authors[0],
-                    Category=categories[0],
-                    Tags=new List<Tag>()
-                    {
                         tags[2]
                     }
                 },
@@ -196,6 +178,24 @@ namespace TagBlog.Data.Seeders
                     Tags=new List<Tag>()
                     {
                         tags[3]
+                    }
+                },
+                new()
+                {
+                    Title="ASP.NET COre Diagnostic Scenarious",
+                    ShortDescription="David and Friend has a greate reposive",
+                    Description="Here's a few greate DON'T and Do examples",
+                    Meta="David and friends has a greate repository filled",
+                    UrlSlug="ASPNET core diagnoretic-scenarious",
+                    Published=true,
+                    PostDate=new DateTime(2021,9,30,10,20,0),
+                    ModifedDate=null,
+                    ViewCount=10,
+                    Author=authors[0],
+                    Category=categories[0],
+                    Tags=new List<Tag>()
+                    {
+                        tags[4]
                     }
                 }
             };
