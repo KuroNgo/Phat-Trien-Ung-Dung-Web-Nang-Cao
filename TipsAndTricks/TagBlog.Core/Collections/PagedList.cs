@@ -13,15 +13,18 @@ namespace TagBlog.Core.Collections
             _subset.AddRange(list);
         }
 
-
         public int PageIndex { get; set; }
+
         public int TotalItemCount { get; set; }
+
         public int PageSize { get; set; }
+
         public int PageNumber
         {
             get => PageIndex + 1;
             set => PageIndex = value - 1;
         }
+
         public int PageCount
         {
             get
@@ -33,17 +36,18 @@ namespace TagBlog.Core.Collections
             }
         }
 
-        public int HasPreviousPage => throw new NotImplementedException();
+        public bool HasPreviousPage => PageIndex > 0;
 
-        public int HasNextPage => throw new NotImplementedException();
+        public bool HasNextPage => (PageIndex<(PageCount-1));
 
-        public bool IsFirstPage => throw new NotImplementedException();
+        public bool IsFirstPage =>(PageIndex<=0);
 
-        public bool IsLastPage => throw new NotImplementedException();
+        public bool IsLastPage => (PageIndex>=(PageCount-1));
 
-        public int FirstItemIndex => throw new NotImplementedException();
+        public int FirstItemIndex => (PageIndex * PageSize);
 
-        public int LastItemIndex => throw new NotImplementedException();
+        public int LastItemIndex =>
+            Math.Min(TotalItemCount,((PageIndex*PageSize)+PageSize));
 
         #region
         public IEnumerator<T> GetEnumerator()
@@ -57,6 +61,7 @@ namespace TagBlog.Core.Collections
         }
 
         public T this[int index] => _subset[index];
+
         public virtual int Count => _subset.Count;
         #endregion
     }

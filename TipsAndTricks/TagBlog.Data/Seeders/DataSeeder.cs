@@ -18,8 +18,9 @@ namespace TagBlog.Data.Seeders
         public void Initialize()
         {
             //tại vì có dữ liệu rồi nên nó sẽ ko thêm nữa
-            //_dbContext.Database.EnsureCreated();
+            _dbContext.Database.EnsureCreated();
             //if (_dbContext.Posts.Any()) return;
+            // Hiển thị thông tin của các add không được đầy đủ
             var authors = AddAuthor();
             var categories=AddCategory();
             var tags=AddTag();
