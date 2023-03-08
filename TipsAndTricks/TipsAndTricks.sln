@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagBlog.Core", "TagBlog.Core\TagBlog.Core.csproj", "{137966FF-8F7D-4262-BBDE-3B9D03CEF6B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TagBlog.Core", "TagBlog.Core\TagBlog.Core.csproj", "{137966FF-8F7D-4262-BBDE-3B9D03CEF6B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagBlog.Data", "TagBlog.Data\TagBlog.Data.csproj", "{72B7291A-D4BF-41B7-8AF2-A8F7ED461F80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TagBlog.Data", "TagBlog.Data\TagBlog.Data.csproj", "{72B7291A-D4BF-41B7-8AF2-A8F7ED461F80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagBlog.Services", "TagBlog.Services\TagBlog.Services.csproj", "{B5C2CFC2-75F1-4E3B-A4FB-7E033DE6F50F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TagBlog.Services", "TagBlog.Services\TagBlog.Services.csproj", "{B5C2CFC2-75F1-4E3B-A4FB-7E033DE6F50F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagBlog.WinApp", "TagBlog.WinApp\TagBlog.WinApp.csproj", "{75091C3D-C5F1-4C9F-B79A-2CB4D6F29867}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TagBlog.WinApp", "TagBlog.WinApp\TagBlog.WinApp.csproj", "{75091C3D-C5F1-4C9F-B79A-2CB4D6F29867}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TatBlog.WebApp", "TatBlog.WebApp\TatBlog.WebApp\TatBlog.WebApp.csproj", "{97EB04DB-4853-45FB-B79B-6083265C8250}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{75091C3D-C5F1-4C9F-B79A-2CB4D6F29867}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75091C3D-C5F1-4C9F-B79A-2CB4D6F29867}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75091C3D-C5F1-4C9F-B79A-2CB4D6F29867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97EB04DB-4853-45FB-B79B-6083265C8250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97EB04DB-4853-45FB-B79B-6083265C8250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97EB04DB-4853-45FB-B79B-6083265C8250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97EB04DB-4853-45FB-B79B-6083265C8250}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
